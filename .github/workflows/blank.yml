@@ -1,25 +1,17 @@
 name: CI
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
 
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  
 
     steps:
-    - uses: actions/checkout@v1
-    - name: label change test1
-      run: | 
-        pwd
-        ls
-    - name: label change test2
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
-
-    - name: build
-      run: |
+    - uses: actions/checkout@v2  
+    - name: Run a one-line script
+      run: echo Hello, world!  
         cd C++/helloworld/
         ./build.sh
     - name: test
