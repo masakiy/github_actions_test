@@ -17,3 +17,11 @@ jobs:
       run: |
         echo Add other actions to build,
         echo test, and deploy your project.
+
+    - name: build
+      run: |
+        cd C++/helloworld/
+        ./build.sh
+    - name: test
+      run: |
+         C++/helloworld/build/test_calc  
