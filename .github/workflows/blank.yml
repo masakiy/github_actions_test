@@ -6,14 +6,10 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest  
+    runs-on: ubuntu-latest
+    name: good evening
 
     steps:
     - uses: actions/checkout@v2  
     - name: Run a one-line script
-      run: echo Hello, world!  
-        cd C++/helloworld/
-        ./build.sh
-    - name: test
-      run: |
-         C++/helloworld/build/test_calc
+    - run: echo good evening
